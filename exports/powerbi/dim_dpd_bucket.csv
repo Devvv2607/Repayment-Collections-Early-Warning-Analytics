@@ -1,0 +1,6 @@
+dpd_bucket_order,dpd_bucket,dpd_bucket_label,dpd_min,dpd_max
+0,0,Current (0 DPD),0,0
+1,1-30,1-30 DPD,1,30
+2,31-60,31-60 DPD,31,60
+3,61-90,61-90 DPD,61,90
+4,90+,90+ DPD,91,

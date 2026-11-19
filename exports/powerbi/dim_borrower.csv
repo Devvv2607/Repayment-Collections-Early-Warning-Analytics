@@ -1,0 +1,146 @@
+borrower_profile_key,income_type,age_band,region_rating,gender
+1,Commercial associate,1: <25,1,F
+2,Commercial associate,1: <25,1,M
+3,Commercial associate,1: <25,2,F
+4,Commercial associate,1: <25,2,M
+5,Commercial associate,1: <25,3,F
+6,Commercial associate,1: <25,3,M
+7,Commercial associate,2: 25-34,1,F
+8,Commercial associate,2: 25-34,1,M
+9,Commercial associate,2: 25-34,2,F
+10,Commercial associate,2: 25-34,2,M
+11,Commercial associate,2: 25-34,2,XNA
+12,Commercial associate,2: 25-34,3,F
+13,Commercial associate,2: 25-34,3,M
+14,Commercial associate,3: 35-44,1,F
+15,Commercial associate,3: 35-44,1,M
+16,Commercial associate,3: 35-44,2,F
+17,Commercial associate,3: 35-44,2,M
+18,Commercial associate,3: 35-44,3,F
+19,Commercial associate,3: 35-44,3,M
+20,Commercial associate,4: 45-54,1,F
+21,Commercial associate,4: 45-54,1,M
+22,Commercial associate,4: 45-54,2,F
+23,Commercial associate,4: 45-54,2,M
+24,Commercial associate,4: 45-54,3,F
+25,Commercial associate,4: 45-54,3,M
+26,Commercial associate,5: 55+,1,F
+27,Commercial associate,5: 55+,1,M
+28,Commercial associate,5: 55+,2,F
+29,Commercial associate,5: 55+,2,M
+30,Commercial associate,5: 55+,3,F
+31,Commercial associate,5: 55+,3,M
+32,Maternity leave,3: 35-44,2,F
+33,Maternity leave,3: 35-44,3,F
+34,Pensioner,1: <25,1,M
+35,Pensioner,1: <25,2,F
+36,Pensioner,1: <25,2,M
+37,Pensioner,1: <25,3,F
+38,Pensioner,1: <25,3,M
+39,Pensioner,2: 25-34,1,F
+40,Pensioner,2: 25-34,1,M
+41,Pensioner,2: 25-34,2,F
+42,Pensioner,2: 25-34,2,M
+43,Pensioner,2: 25-34,3,F
+44,Pensioner,2: 25-34,3,M
+45,Pensioner,3: 35-44,1,F
+46,Pensioner,3: 35-44,1,M
+47,Pensioner,3: 35-44,2,F
+48,Pensioner,3: 35-44,2,M
+49,Pensioner,3: 35-44,3,F
+50,Pensioner,3: 35-44,3,M
+51,Pensioner,4: 45-54,1,F
+52,Pensioner,4: 45-54,1,M
+53,Pensioner,4: 45-54,2,F
+54,Pensioner,4: 45-54,2,M
+55,Pensioner,4: 45-54,3,F
+56,Pensioner,4: 45-54,3,M
+57,Pensioner,5: 55+,1,F
+58,Pensioner,5: 55+,1,M
+59,Pensioner,5: 55+,2,F
+60,Pensioner,5: 55+,2,M
+61,Pensioner,5: 55+,3,F
+62,Pensioner,5: 55+,3,M
+63,State servant,1: <25,1,F
+64,State servant,1: <25,1,M
+65,State servant,1: <25,2,F
+66,State servant,1: <25,2,M
+67,State servant,1: <25,3,F
+68,State servant,1: <25,3,M
+69,State servant,2: 25-34,1,F
+70,State servant,2: 25-34,1,M
+71,State servant,2: 25-34,2,F
+72,State servant,2: 25-34,2,M
+73,State servant,2: 25-34,3,F
+74,State servant,2: 25-34,3,M
+75,State servant,3: 35-44,1,F
+76,State servant,3: 35-44,1,M
+77,State servant,3: 35-44,2,F
+78,State servant,3: 35-44,2,M
+79,State servant,3: 35-44,3,F
+80,State servant,3: 35-44,3,M
+81,State servant,4: 45-54,1,F
+82,State servant,4: 45-54,1,M
+83,State servant,4: 45-54,2,F
+84,State servant,4: 45-54,2,M
+85,State servant,4: 45-54,3,F
+86,State servant,4: 45-54,3,M
+87,State servant,5: 55+,1,F
+88,State servant,5: 55+,1,M
+89,State servant,5: 55+,2,F
+90,State servant,5: 55+,2,M
+91,State servant,5: 55+,3,F
+92,State servant,5: 55+,3,M
+93,Student,1: <25,2,M
+94,Student,1: <25,3,F
+95,Student,2: 25-34,1,F
+96,Student,2: 25-34,2,F
+97,Student,2: 25-34,2,M
+98,Student,3: 35-44,3,M
+99,Student,4: 45-54,2,F
+100,Student,4: 45-54,2,M
+101,Student,4: 45-54,3,F
+102,Unemployed,1: <25,2,F
+103,Unemployed,2: 25-34,2,M
+104,Unemployed,3: 35-44,2,F
+105,Unemployed,3: 35-44,3,F
+106,Unemployed,4: 45-54,1,F
+107,Unemployed,4: 45-54,2,F
+108,Unemployed,4: 45-54,3,F
+109,Unemployed,5: 55+,2,F
+110,Unemployed,5: 55+,2,M
+111,Unemployed,5: 55+,3,F
+112,Unknown,Unknown,Unknown,Unknown
+113,Working,1: <25,1,F
+114,Working,1: <25,1,M
+115,Working,1: <25,2,F
+116,Working,1: <25,2,M
+117,Working,1: <25,3,F
+118,Working,1: <25,3,M
+119,Working,2: 25-34,1,F
+120,Working,2: 25-34,1,M
+121,Working,2: 25-34,2,F
+122,Working,2: 25-34,2,M
+123,Working,2: 25-34,2,XNA
+124,Working,2: 25-34,3,F
+125,Working,2: 25-34,3,M
+126,Working,3: 35-44,1,F
+127,Working,3: 35-44,1,M
+128,Working,3: 35-44,2,F
+129,Working,3: 35-44,2,M
+130,Working,3: 35-44,2,XNA
+131,Working,3: 35-44,3,F
+132,Working,3: 35-44,3,M
+133,Working,4: 45-54,1,F
+134,Working,4: 45-54,1,M
+135,Working,4: 45-54,2,F
+136,Working,4: 45-54,2,M
+137,Working,4: 45-54,3,F
+138,Working,4: 45-54,3,M
+139,Working,5: 55+,1,F
+140,Working,5: 55+,1,M
+141,Working,5: 55+,2,F
+142,Working,5: 55+,2,M
+143,Working,5: 55+,3,F
+144,Working,5: 55+,3,M
+145,Working,5: 55+,3,XNA

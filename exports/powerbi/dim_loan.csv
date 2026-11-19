@@ -1,0 +1,156 @@
+loan_profile_key,contract_type,product_type,channel,loan_size_band
+1,Cash loans,walk-in,AP+ (Cash loan),1: <50k
+2,Cash loans,walk-in,AP+ (Cash loan),2: 50k-150k
+3,Cash loans,walk-in,AP+ (Cash loan),3: 150k-300k
+4,Cash loans,walk-in,AP+ (Cash loan),4: 300k-600k
+5,Cash loans,walk-in,AP+ (Cash loan),5: 600k+
+6,Cash loans,walk-in,Car dealer,4: 300k-600k
+7,Cash loans,walk-in,Car dealer,5: 600k+
+8,Cash loans,walk-in,Channel of corporate sales,1: <50k
+9,Cash loans,walk-in,Channel of corporate sales,2: 50k-150k
+10,Cash loans,walk-in,Channel of corporate sales,3: 150k-300k
+11,Cash loans,walk-in,Channel of corporate sales,4: 300k-600k
+12,Cash loans,walk-in,Channel of corporate sales,5: 600k+
+13,Cash loans,walk-in,Contact center,1: <50k
+14,Cash loans,walk-in,Contact center,2: 50k-150k
+15,Cash loans,walk-in,Contact center,3: 150k-300k
+16,Cash loans,walk-in,Contact center,4: 300k-600k
+17,Cash loans,walk-in,Contact center,5: 600k+
+18,Cash loans,walk-in,Country-wide,1: <50k
+19,Cash loans,walk-in,Country-wide,2: 50k-150k
+20,Cash loans,walk-in,Country-wide,3: 150k-300k
+21,Cash loans,walk-in,Country-wide,4: 300k-600k
+22,Cash loans,walk-in,Country-wide,5: 600k+
+23,Cash loans,walk-in,Credit and cash offices,1: <50k
+24,Cash loans,walk-in,Credit and cash offices,2: 50k-150k
+25,Cash loans,walk-in,Credit and cash offices,3: 150k-300k
+26,Cash loans,walk-in,Credit and cash offices,4: 300k-600k
+27,Cash loans,walk-in,Credit and cash offices,5: 600k+
+28,Cash loans,walk-in,Regional / Local,1: <50k
+29,Cash loans,walk-in,Regional / Local,2: 50k-150k
+30,Cash loans,walk-in,Regional / Local,3: 150k-300k
+31,Cash loans,walk-in,Regional / Local,4: 300k-600k
+32,Cash loans,walk-in,Regional / Local,5: 600k+
+33,Cash loans,walk-in,Stone,1: <50k
+34,Cash loans,walk-in,Stone,2: 50k-150k
+35,Cash loans,walk-in,Stone,3: 150k-300k
+36,Cash loans,walk-in,Stone,4: 300k-600k
+37,Cash loans,walk-in,Stone,5: 600k+
+38,Cash loans,x-sell,AP+ (Cash loan),1: <50k
+39,Cash loans,x-sell,AP+ (Cash loan),2: 50k-150k
+40,Cash loans,x-sell,AP+ (Cash loan),3: 150k-300k
+41,Cash loans,x-sell,AP+ (Cash loan),4: 300k-600k
+42,Cash loans,x-sell,AP+ (Cash loan),5: 600k+
+43,Cash loans,x-sell,Car dealer,2: 50k-150k
+44,Cash loans,x-sell,Car dealer,3: 150k-300k
+45,Cash loans,x-sell,Car dealer,4: 300k-600k
+46,Cash loans,x-sell,Car dealer,5: 600k+
+47,Cash loans,x-sell,Channel of corporate sales,2: 50k-150k
+48,Cash loans,x-sell,Channel of corporate sales,3: 150k-300k
+49,Cash loans,x-sell,Channel of corporate sales,4: 300k-600k
+50,Cash loans,x-sell,Channel of corporate sales,5: 600k+
+51,Cash loans,x-sell,Contact center,1: <50k
+52,Cash loans,x-sell,Contact center,2: 50k-150k
+53,Cash loans,x-sell,Contact center,3: 150k-300k
+54,Cash loans,x-sell,Contact center,4: 300k-600k
+55,Cash loans,x-sell,Contact center,5: 600k+
+56,Cash loans,x-sell,Country-wide,1: <50k
+57,Cash loans,x-sell,Country-wide,2: 50k-150k
+58,Cash loans,x-sell,Country-wide,3: 150k-300k
+59,Cash loans,x-sell,Country-wide,4: 300k-600k
+60,Cash loans,x-sell,Country-wide,5: 600k+
+61,Cash loans,x-sell,Credit and cash offices,1: <50k
+62,Cash loans,x-sell,Credit and cash offices,2: 50k-150k
+63,Cash loans,x-sell,Credit and cash offices,3: 150k-300k
+64,Cash loans,x-sell,Credit and cash offices,4: 300k-600k
+65,Cash loans,x-sell,Credit and cash offices,5: 600k+
+66,Cash loans,x-sell,Regional / Local,1: <50k
+67,Cash loans,x-sell,Regional / Local,2: 50k-150k
+68,Cash loans,x-sell,Regional / Local,3: 150k-300k
+69,Cash loans,x-sell,Regional / Local,4: 300k-600k
+70,Cash loans,x-sell,Regional / Local,5: 600k+
+71,Cash loans,x-sell,Stone,1: <50k
+72,Cash loans,x-sell,Stone,2: 50k-150k
+73,Cash loans,x-sell,Stone,3: 150k-300k
+74,Cash loans,x-sell,Stone,4: 300k-600k
+75,Cash loans,x-sell,Stone,5: 600k+
+76,Consumer loans,XNA,Car dealer,3: 150k-300k
+77,Consumer loans,XNA,Car dealer,4: 300k-600k
+78,Consumer loans,XNA,Car dealer,5: 600k+
+79,Consumer loans,XNA,Country-wide,1: <50k
+80,Consumer loans,XNA,Country-wide,2: 50k-150k
+81,Consumer loans,XNA,Country-wide,3: 150k-300k
+82,Consumer loans,XNA,Country-wide,4: 300k-600k
+83,Consumer loans,XNA,Country-wide,5: 600k+
+84,Consumer loans,XNA,Regional / Local,1: <50k
+85,Consumer loans,XNA,Regional / Local,2: 50k-150k
+86,Consumer loans,XNA,Regional / Local,3: 150k-300k
+87,Consumer loans,XNA,Regional / Local,4: 300k-600k
+88,Consumer loans,XNA,Regional / Local,5: 600k+
+89,Consumer loans,XNA,Stone,1: <50k
+90,Consumer loans,XNA,Stone,2: 50k-150k
+91,Consumer loans,XNA,Stone,3: 150k-300k
+92,Consumer loans,XNA,Stone,4: 300k-600k
+93,Consumer loans,XNA,Stone,5: 600k+
+94,Revolving loans,walk-in,AP+ (Cash loan),1: <50k
+95,Revolving loans,walk-in,AP+ (Cash loan),2: 50k-150k
+96,Revolving loans,walk-in,AP+ (Cash loan),3: 150k-300k
+97,Revolving loans,walk-in,AP+ (Cash loan),4: 300k-600k
+98,Revolving loans,walk-in,AP+ (Cash loan),5: 600k+
+99,Revolving loans,walk-in,Car dealer,2: 50k-150k
+100,Revolving loans,walk-in,Channel of corporate sales,1: <50k
+101,Revolving loans,walk-in,Channel of corporate sales,2: 50k-150k
+102,Revolving loans,walk-in,Channel of corporate sales,3: 150k-300k
+103,Revolving loans,walk-in,Channel of corporate sales,4: 300k-600k
+104,Revolving loans,walk-in,Channel of corporate sales,5: 600k+
+105,Revolving loans,walk-in,Country-wide,1: <50k
+106,Revolving loans,walk-in,Country-wide,2: 50k-150k
+107,Revolving loans,walk-in,Country-wide,3: 150k-300k
+108,Revolving loans,walk-in,Country-wide,4: 300k-600k
+109,Revolving loans,walk-in,Credit and cash offices,1: <50k
+110,Revolving loans,walk-in,Credit and cash offices,2: 50k-150k
+111,Revolving loans,walk-in,Credit and cash offices,3: 150k-300k
+112,Revolving loans,walk-in,Credit and cash offices,4: 300k-600k
+113,Revolving loans,walk-in,Credit and cash offices,5: 600k+
+114,Revolving loans,walk-in,Regional / Local,1: <50k
+115,Revolving loans,walk-in,Regional / Local,2: 50k-150k
+116,Revolving loans,walk-in,Regional / Local,3: 150k-300k
+117,Revolving loans,walk-in,Stone,1: <50k
+118,Revolving loans,walk-in,Stone,2: 50k-150k
+119,Revolving loans,walk-in,Stone,3: 150k-300k
+120,Revolving loans,x-sell,AP+ (Cash loan),1: <50k
+121,Revolving loans,x-sell,AP+ (Cash loan),2: 50k-150k
+122,Revolving loans,x-sell,AP+ (Cash loan),3: 150k-300k
+123,Revolving loans,x-sell,AP+ (Cash loan),4: 300k-600k
+124,Revolving loans,x-sell,AP+ (Cash loan),5: 600k+
+125,Revolving loans,x-sell,Channel of corporate sales,1: <50k
+126,Revolving loans,x-sell,Channel of corporate sales,2: 50k-150k
+127,Revolving loans,x-sell,Channel of corporate sales,3: 150k-300k
+128,Revolving loans,x-sell,Channel of corporate sales,4: 300k-600k
+129,Revolving loans,x-sell,Channel of corporate sales,5: 600k+
+130,Revolving loans,x-sell,Contact center,1: <50k
+131,Revolving loans,x-sell,Contact center,2: 50k-150k
+132,Revolving loans,x-sell,Contact center,3: 150k-300k
+133,Revolving loans,x-sell,Contact center,4: 300k-600k
+134,Revolving loans,x-sell,Contact center,5: 600k+
+135,Revolving loans,x-sell,Country-wide,1: <50k
+136,Revolving loans,x-sell,Country-wide,2: 50k-150k
+137,Revolving loans,x-sell,Country-wide,3: 150k-300k
+138,Revolving loans,x-sell,Country-wide,4: 300k-600k
+139,Revolving loans,x-sell,Country-wide,5: 600k+
+140,Revolving loans,x-sell,Credit and cash offices,1: <50k
+141,Revolving loans,x-sell,Credit and cash offices,2: 50k-150k
+142,Revolving loans,x-sell,Credit and cash offices,3: 150k-300k
+143,Revolving loans,x-sell,Credit and cash offices,4: 300k-600k
+144,Revolving loans,x-sell,Credit and cash offices,5: 600k+
+145,Revolving loans,x-sell,Regional / Local,1: <50k
+146,Revolving loans,x-sell,Regional / Local,2: 50k-150k
+147,Revolving loans,x-sell,Regional / Local,3: 150k-300k
+148,Revolving loans,x-sell,Regional / Local,4: 300k-600k
+149,Revolving loans,x-sell,Regional / Local,5: 600k+
+150,Revolving loans,x-sell,Stone,1: <50k
+151,Revolving loans,x-sell,Stone,2: 50k-150k
+152,Revolving loans,x-sell,Stone,3: 150k-300k
+153,Revolving loans,x-sell,Stone,4: 300k-600k
+154,Revolving loans,x-sell,Stone,5: 600k+
+155,Unknown,Unknown,Unknown,Unknown

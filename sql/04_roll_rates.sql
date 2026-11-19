@@ -41,7 +41,7 @@ SELECT SK_ID_PREV,
        is_late,
        dpd_bucket,
        dpd_bucket_order,
-       contract_type, product_type, channel, income_type, age_band, region_rating, loan_size_band,
+       contract_type, product_type, channel, income_type, age_band, region_rating, loan_size_band, gender,
        -- The next installment on the same loan (NULL for the last one).
        LEAD(dpd_bucket) OVER w        AS next_dpd_bucket,
        LEAD(dpd_bucket_order) OVER w  AS next_dpd_bucket_order,
