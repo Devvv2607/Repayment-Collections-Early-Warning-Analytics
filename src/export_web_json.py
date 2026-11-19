@@ -8,6 +8,7 @@ import json
 import re
 
 from db import ROOT, SQL_DIR
+from report import DEFINITIONS
 
 OUT = ROOT / "web" / "public" / "data"
 MAX_TOTAL_BYTES = 1_000_000
@@ -58,6 +59,7 @@ def export(con, r: dict) -> None:
             "validation": r["validation"],
             "checks": r["checks"],
             "roll_definition": r["roll_definition"],
+            "definitions": {k: {"name": n, "text": t} for k, (n, t) in DEFINITIONS.items()},
             "sql_leakage_window": _leakage_snippet(),
             "sql_fact_grain": _fact_snippet(),
         },

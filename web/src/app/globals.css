@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  background: #f7f7f5;
+  color: #0b0b0b;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Recharts: keep focus outlines tidy */
+.recharts-wrapper:focus,
+.recharts-surface:focus {
+  outline: none;
+}
+
+@layer components {
+  .card {
+    @apply rounded-xl border border-line bg-surface p-4 sm:p-6;
+  }
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-wider text-ink-muted;
+  }
+  .h-section {
+    @apply text-lg font-semibold text-ink sm:text-xl;
+  }
+  .seg-btn {
+    @apply rounded-md px-3 py-1.5 text-sm font-medium text-ink-2 transition-colors hover:bg-plane focus:outline-none focus-visible:ring-2 focus-visible:ring-accent;
+  }
+  .seg-btn-active {
+    @apply bg-surface text-ink shadow-sm ring-1 ring-line;
+  }
+}

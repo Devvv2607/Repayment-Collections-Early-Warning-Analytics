@@ -18,6 +18,44 @@ ROLL_DEFINITION = (
     "with no next installment (the last one observed on a loan) are excluded from the denominator."
 )
 
+# Single source of metric definitions: used by the Excel MIS (Definitions sheet)
+# and the web dashboard (info tooltips, Methodology page).
+DEFINITIONS = {
+    "installments": ("Installment record",
+                     "One scheduled installment: a unique (SK_ID_PREV, NUM_INSTALMENT_VERSION, NUM_INSTALMENT_NUMBER). "
+                     "Payment rows are collapsed: scheduled = MAX(AMT_INSTALMENT), taken once; paid = SUM(AMT_PAYMENT)."),
+    "dpd": ("DPD (days past due)",
+            "GREATEST(last payment day - due day, 0). The last payment is when the installment was fully settled. "
+            "Installments with no payment at all are aged to day 0, the observation point."),
+    "on_time": ("On-time %", "Installments with DPD = 0 AND paid >= 99% of the scheduled amount, divided by all installments."),
+    "coverage": ("Coverage %", "Sum of amounts paid / sum of amounts scheduled. Can exceed 100% because borrowers prepay."),
+    "partial": ("Partial %", "Installments where 0 < paid / scheduled < 99%, divided by all installments."),
+    "late": ("Late %", "Installments with DPD > 0, divided by all installments."),
+    "dpd_buckets": ("DPD buckets", "0, 1-30, 31-60, 61-90 and 90+ days past due. Shares by count of installments "
+                                   "or weighted by scheduled amount."),
+    "roll_30_60": ("30->60 roll rate", ROLL_DEFINITION),
+    "cure_rate": ("Cure rate", "Of installments in '1-30' with a next installment, the share whose next installment is "
+                               "on time (DPD 0)."),
+    "repeat_delinquent": ("Repeat-delinquent",
+                          "The borrower had at least N late installments (DPD > 0, on any of their loans) due strictly "
+                          "BEFORE the current installment's due day. Headline N = 2. The window frame ends at 1 "
+                          "PRECEDING, so there is no look-ahead."),
+    "never_late": ("Never late", "The borrower had no late installment due before the current one."),
+    "severe_history": ("Severe history (sensitivity)",
+                       "The borrower had at least N installments more than 30 days late due before the current one. "
+                       "Same leakage-safe window. Reported separately from the headline."),
+    "outstanding": ("Outstanding (proxy)",
+                    "Active loans only (DAYS_TERMINATION = 365243): remaining installments x annuity. The dataset has "
+                    "no balance snapshots, so this is a proxy."),
+    "expected_roll": ("Expected roll amount",
+                      "Repeat-delinquent 30->60 roll rate of the segment x outstanding held by its repeat-delinquent "
+                      "borrowers today. Used to rank early-warning segments."),
+    "ci": ("95% confidence interval", "p +/- 1.96 * sqrt(p(1-p)/n): the range that would contain the true rate in "
+                                       "95% of repeated samples."),
+    "ztest": ("Two-proportion z-test",
+              "z = (p1 - p2) / sqrt(p_pool(1 - p_pool)(1/n1 + 1/n2)). |z| > 1.96 means the gap is significant at 5%."),
+}
+
 
 def records(con, query: str) -> list[dict]:
     """Query -> list of plain-Python dicts (JSON-safe, NaN -> None)."""

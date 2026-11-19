@@ -10,6 +10,7 @@ from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import get_column_letter
 
 from db import ROOT
+from report import DEFINITIONS
 
 OUT = ROOT / "exports" / "collections_MIS.xlsx"
 ORDER = ["0", "1-30", "31-60", "61-90", "90+"]
@@ -220,32 +221,10 @@ def sheet_early_warning(wb, con):
     ws.freeze_panes = "D3"
 
 
-DEFINITIONS = [
-    ("Installment (grain)", "One row per (SK_ID_PREV, NUM_INSTALMENT_VERSION, NUM_INSTALMENT_NUMBER). Payment rows "
-     "are collapsed: scheduled = MAX(AMT_INSTALMENT) (taken once), paid = SUM(AMT_PAYMENT)."),
-    ("DPD", "GREATEST(last payment day - due day, 0). Last payment = when the installment was settled. Installments "
-            "with no payment are aged to day 0 (observation point)."),
-    ("On-time %", "Installments with dpd = 0 AND paid >= 99% of scheduled / all installments."),
-    ("Coverage %", "Sum of paid amount / sum of scheduled amount (can exceed 100% because of prepayments)."),
-    ("Partial %", "Installments with 0 < paid/scheduled < 99% / all installments."),
-    ("Late %", "Installments with dpd > 0 / all installments."),
-    ("DPD buckets", "0, 1-30, 31-60, 61-90, 90+ days past due."),
-    ("30->60 roll rate", "Share of installments in DPD bucket '1-30' whose NEXT installment on the same loan (ordered "
-                         "by NUM_INSTALMENT_NUMBER, latest version per number) lands in '31-60' or worse. "
-                         "Installments with no next installment are excluded."),
-    ("Repeat-delinquent", "Borrower had >= 2 late installments (dpd > 0, any loan) due strictly BEFORE the current "
-                          "installment's due day (window frame ends at 1 PRECEDING, so there is no look-ahead)."),
-    ("Severe history (sensitivity)", ">= 1 prior installment more than 30 days late, same leakage-safe window."),
-    ("Outstanding (proxy)", "Active loans (DAYS_TERMINATION = 365243): remaining installments x annuity. "
-                            "The dataset has no balance snapshots."),
-    ("Expected roll amount", "Repeat-delinquent 30->60 roll rate x outstanding of that segment."),
-]
-
-
 def sheet_definitions(wb):
     ws = wb.create_sheet("Definitions")
     _header(ws, 1, ["Metric", "Definition"])
-    for i, (k, v) in enumerate(DEFINITIONS, start=2):
+    for i, (k, v) in enumerate(DEFINITIONS.values(), start=2):
         ws.cell(row=i, column=1, value=k).font = TOTAL_FONT
         c = ws.cell(row=i, column=2, value=v)
         c.alignment = Alignment(wrap_text=True, vertical="top")
