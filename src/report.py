@@ -94,6 +94,11 @@ def num(x):
     return "n/a" if x is None else f"{x:,.0f}"
 
 
+def pval(x):
+    """p-values below double precision underflow to 0; say so instead of printing 0."""
+    return "< 1e-300" if x == 0 else f"{x:.1e}"
+
+
 def money(x):
     """Amounts are in the dataset's currency units (not stated by Home Credit)."""
     if x is None:
@@ -189,19 +194,19 @@ def write_results_md(r: dict) -> None:
                      f"{pct(x['ci_low'])} to {pct(x['ci_high'])}"])
     L.append(_table(["Group", "At risk (1-30)", "Rolled 31+", "30->60 roll", "95% CI"], rows))
     z = h["ztest"]
-    L.append(f"\n- Two-proportion z-test, repeat vs not-repeat: z = {z['z_stat']:.2f}, p = {z['p_value']:.2e}")
+    L.append(f"\n- Two-proportion z-test, repeat vs not-repeat: z = {z['z_stat']:.2f}, p = {pval(z['p_value'])}")
     L.append(f"- Lift vs overall: {z['lift_vs_overall']:.2f}x; lift vs not-repeat: {z['lift_vs_not_repeat']:.2f}x")
     L.append(f"- Share of all 1-30 at-risk installments that fall in the segment: {pct(z['share_of_at_risk'])}\n")
 
     L.append("All thresholds (history = prior installments with dpd > 0):\n")
     L.append(_table(["Threshold", "Repeat roll", "Not-repeat roll", "Lift vs overall", "z", "p", "Share of at-risk"],
                     [[f">= {x['threshold']}", pct(x["p_repeat"]), pct(x["p_not_repeat"]), f"{x['lift_vs_overall']:.2f}x",
-                      f"{x['z_stat']:.1f}", f"{x['p_value']:.1e}", pct(x["share_of_at_risk"])]
+                      f"{x['z_stat']:.1f}", pval(x["p_value"]), pct(x["share_of_at_risk"])]
                      for x in r["repeat_ztest"] if x["definition"] == "any_late"]))
     L.append("\nSensitivity (history = prior installments more than 30 days late):\n")
     L.append(_table(["Threshold", "Repeat roll", "Not-repeat roll", "Lift vs overall", "z", "p", "Share of at-risk"],
                     [[f">= {x['threshold']}", pct(x["p_repeat"]), pct(x["p_not_repeat"]), f"{x['lift_vs_overall']:.2f}x",
-                      f"{x['z_stat']:.1f}", f"{x['p_value']:.1e}", pct(x["share_of_at_risk"])]
+                      f"{x['z_stat']:.1f}", pval(x["p_value"]), pct(x["share_of_at_risk"])]
                      for x in r["repeat_ztest"] if x["definition"] == "severe_late"]))
 
     L.append("\n### Opportunity sizing (active loans at day 0)\n")

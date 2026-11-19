@@ -88,7 +88,7 @@ Headline segment: **repeat_delinquent = at least 2 prior late installments (dpd 
 | Never late before | 162,331 | 1,569 | 0.97% | 0.92% to 1.01% |
 | Overall | 990,053 | 12,731 | 1.29% | 1.26% to 1.31% |
 
-- Two-proportion z-test, repeat vs not-repeat: z = 12.17, p = 4.71e-34
+- Two-proportion z-test, repeat vs not-repeat: z = 12.17, p = 4.7e-34
 - Lift vs overall: 1.07x; lift vs not-repeat: 1.28x
 - Share of all 1-30 at-risk installments that fall in the segment: 71.27%
 
@@ -106,11 +106,11 @@ Sensitivity (history = prior installments more than 30 days late):
 
 | Threshold | Repeat roll | Not-repeat roll | Lift vs overall | z | p | Share of at-risk |
 |---|---|---|---|---|---|---|
-| >= 1 | 4.00% | 0.96% | 3.11x | 83.4 | 0.0e+00 | 10.77% |
-| >= 2 | 5.28% | 1.13% | 4.11x | 70.6 | 0.0e+00 | 3.86% |
-| >= 3 | 5.98% | 1.20% | 4.65x | 57.4 | 0.0e+00 | 1.88% |
-| >= 4 | 6.69% | 1.23% | 5.20x | 47.9 | 0.0e+00 | 1.00% |
-| >= 5 | 7.43% | 1.25% | 5.77x | 40.4 | 0.0e+00 | 0.55% |
+| >= 1 | 4.00% | 0.96% | 3.11x | 83.4 | < 1e-300 | 10.77% |
+| >= 2 | 5.28% | 1.13% | 4.11x | 70.6 | < 1e-300 | 3.86% |
+| >= 3 | 5.98% | 1.20% | 4.65x | 57.4 | < 1e-300 | 1.88% |
+| >= 4 | 6.69% | 1.23% | 5.20x | 47.9 | < 1e-300 | 1.00% |
+| >= 5 | 7.43% | 1.25% | 5.77x | 40.4 | < 1e-300 | 0.55% |
 
 ### Opportunity sizing (active loans at day 0)
 
