@@ -40,7 +40,8 @@ SELECT SK_ID_PREV,
        AMT_ANNUITY,
        NAME_PRODUCT_TYPE,
        CHANNEL_TYPE,
-       CNT_PAYMENT
+       CNT_PAYMENT,
+       DAYS_TERMINATION       -- 365243 = Kaggle placeholder for "not terminated yet" (active loan)
 FROM 'data/processed/previous_application.parquet';
 
 -- Borrower grain: one row per current applicant (train set only).
@@ -115,7 +116,12 @@ SELECT COUNT(*)                                              AS installments,
        SUM(scheduled_amt)                                    AS correct_scheduled_total,
        SUM(naive_scheduled_amt)                              AS naive_scheduled_total,
        SUM(naive_scheduled_amt) - SUM(scheduled_amt)         AS overstatement_amt,
-       SUM(naive_scheduled_amt) / SUM(scheduled_amt) - 1     AS overstatement_pct
+       SUM(naive_scheduled_amt) / SUM(scheduled_amt) - 1     AS overstatement_pct,
+       -- Second face of the same trap: judged row by row, many payment rows
+       -- look "partial" (AMT_PAYMENT < AMT_INSTALMENT) even though the
+       -- installment is fully paid once its rows are added together.
+       (SELECT COUNT(*) FILTER (WHERE AMT_PAYMENT < 0.99 * AMT_INSTALMENT) / COUNT(*)
+        FROM stg_installments)                              AS row_level_partial_share
 FROM per_installment;
 
 -- One concrete example to show in the README / interview: a single
